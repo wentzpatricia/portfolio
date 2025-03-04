@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export function ThemeToggle()  {
   const [theme, setTheme] = useState('light');
@@ -23,9 +24,10 @@ export function ThemeToggle()  {
   }, []);
 
   return (
-    <button type="button" className="ml-2.5 p-1 hover:bg-medium-red-violet-800/50 rounded cursor-pointer" onClick={toggleTheme}>
-      {theme === 'light' && '🌞'}
-      {theme === 'dark' && '🌙'}
+    <button type="button" className="ml-2.5 p-1 
+     hover:bg-medium-red-violet-800/50 rounded cursor-pointer" 
+      onClick={toggleTheme}>
+      {theme === 'dark' ? (<MoonIcon  className="h-6 w-6 text-medium-red-violet-700"/> ) : (<SunIcon className="h-6 w-6 text-medium-red-violet-700"/>)}
     </button>
   );
   
