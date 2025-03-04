@@ -4,7 +4,7 @@ import { navigationItems } from "../../constants/menu";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 
-import { ReactComponent as Logo} from '../../../src/assets/logo.svg';
+import Logo from '../../../src/assets/logo.svg?react';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function Navbar() {
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
             <div className="flex shrink-0 items-center">
-              <Logo className="h-5 w-auto text-black dark:text-white" />
+              <Logo className="h-5 w-auto"/>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
