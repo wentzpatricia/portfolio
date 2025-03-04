@@ -1,9 +1,9 @@
 import Header from "../../containers/Header/Header";
 
 const Home = () => (
-  <div>
+  <main>
     <Header />
-  </div>
+  </main>
 );
 
 export default Home;
