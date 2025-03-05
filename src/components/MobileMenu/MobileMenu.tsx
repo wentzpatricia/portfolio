@@ -2,9 +2,10 @@ import { navigationItems } from "../../constants/menu";
 
 interface MobileMenuProps {
   isOpen: boolean;
+  handleSmoothScroll: (id: string) => void;
 }
 
-export default function MobileMenu({ isOpen }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, handleSmoothScroll }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
@@ -14,6 +15,10 @@ export default function MobileMenu({ isOpen }: MobileMenuProps) {
           <a
             key={item.name}
             href={item.href}
+            onClick={(e) => {
+              e.preventDefault();
+              handleSmoothScroll(item.href.substring(1));
+            }}
             className={`${
               item.current
                 ? "bg-medium-red-violet-900 text-white"

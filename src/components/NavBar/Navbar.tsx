@@ -1,14 +1,15 @@
-import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navigationItems } from "../../constants/menu";
-import MobileMenu from "../MobileMenu/MobileMenu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
-
 import Logo from '../../../src/assets/logo.svg?react';
 
-export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+interface NavbarProps {
+  isMobileMenuOpen: boolean;
+  toggleMobileMenu: () => void;
+  handleSmoothScroll: (id: string) => void;
+}
 
+export default function Navbar({ isMobileMenuOpen, toggleMobileMenu, handleSmoothScroll }: NavbarProps) {
   return (
     <nav className="bg-background text-text">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -19,7 +20,7 @@ export default function Navbar() {
               className="inline-flex items-center justify-center rounded-md p-2
                text-medium-red-violet-300 hover:bg-medium-red-violet-900/50 hover:text-medium-red-violet-300 focus:outline-none
                 focus:ring-2 focus:ring-inset focus:ring-medium-red-violet-900"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={toggleMobileMenu}
             >
               {isMobileMenuOpen ? (
                 <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -39,6 +40,10 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSmoothScroll(item.href.substring(1));
+                    }}
                     className={`${
                       item.current
                         ? "bg-medium-red-violet-900/50 rounded-md"
@@ -57,8 +62,6 @@ export default function Navbar() {
           <ThemeToggle />
         </div> 
       </div>
-
-      <MobileMenu isOpen={isMobileMenuOpen} />
     </nav>
   );
 }

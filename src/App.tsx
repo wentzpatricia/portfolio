@@ -1,10 +1,12 @@
-import Home from "./pages/Home/Home";
+import MainContent from "./components/MainContent/MainContent";
+import Header from "./containers/Header/Header";
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <main>
+      <Header />
+      <MainContent />
+    </main>
   );
 }
 export default App;
