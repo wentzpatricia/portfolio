@@ -1,7 +1,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navigationItems } from "../../constants/menu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
-import Logo from '../../../src/assets/logo.svg?react';
+import Logo from '../../../src/assets/img/logo.svg?react';
 
 interface NavbarProps {
   isMobileMenuOpen: boolean;
