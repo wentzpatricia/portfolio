@@ -52,6 +52,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  overflow-x: hidden; 
 }
 
 @layer utilities {
@@ -64,7 +65,21 @@ body {
     }
   }
 
+  @keyframes rotateDiagonal {
+    0% {
+      transform: rotate(0deg) translate(20px, -20px);
+    }
+    100% {
+      transform: rotate(360deg) translate(20px, -20px);
+    }
+  }
+
   .animate-gradient {
     animation: gradient-move 3s infinite linear;
   }
+
+  .animate-rotate-diagonal {
+    animation: rotateDiagonal 10s infinite linear;
+  }
+
 }
