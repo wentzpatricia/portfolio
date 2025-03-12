@@ -5,7 +5,7 @@ import MobileMenu from "../../components/MobileMenu/MobileMenu";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -34,15 +34,20 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-medium-red-violet-200/80 shadow-md" : "bg-transparent"}`}>
-      <Navbar 
-        isMobileMenuOpen={isMobileMenuOpen} 
-        toggleMobileMenu={toggleMobileMenu} 
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-medium-red-violet-200/80 shadow-md backdrop-blur-sm"
+          : "bg-transparent"
+      }`}
+    >
+      <Navbar
+        isMobileMenuOpen={isMobileMenuOpen}
+        toggleMobileMenu={toggleMobileMenu}
         handleSmoothScroll={handleSmoothScroll}
       />
-      <MobileMenu 
-        isOpen={isMobileMenuOpen} 
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
         handleSmoothScroll={handleSmoothScroll}
       />
     </header>
