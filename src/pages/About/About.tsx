@@ -17,9 +17,9 @@ const About = () => {
             className="rounded-t-full"
           />
 
-          <div className="absolute top-4 right-8 w-10 h-10 bg-medium-red-violet-600 rounded-t-2xl rounded-br-2xl"></div>
+          <span className="absolute top-10 right-10 w-12 h-12 bg-medium-red-violet-600 rounded-t-2xl rounded-br-2xl"></span>
 
-          <div className="absolute bottom-4 -left-4 w-10 h-10 bg-medium-red-violet-400 rounded-tr-2xl rounded-bl-2xl"></div>
+          <span className="absolute bottom-4 -left-4 w-12 h-12 bg-medium-red-violet-400 rounded-tr-2xl rounded-bl-2xl"></span>
         </div>
       </figure>
 
@@ -52,7 +52,7 @@ const About = () => {
           aprimorando minhas habilidades para continuar evoluindo
           profissionalmente.
         </p>
-        <div className="flex mt-5">
+        <div className="flex mt-10">
           <a
             href="https://github.com/wentzpatricia"
             target="_blank"
