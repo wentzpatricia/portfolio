@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/Navbar";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
+import { navigationItems } from "../../constants/menu";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeItem, setActiveItem] = useState(navigationItems[0].href);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,6 +17,7 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setActiveItem(`#${id}`);
   };
 
   useEffect(() => {
@@ -45,10 +48,12 @@ const Header = () => {
         isMobileMenuOpen={isMobileMenuOpen}
         toggleMobileMenu={toggleMobileMenu}
         handleSmoothScroll={handleSmoothScroll}
+        activeItem={activeItem}
       />
       <MobileMenu
         isOpen={isMobileMenuOpen}
         handleSmoothScroll={handleSmoothScroll}
+        activeItem={activeItem}
       />
     </header>
   );

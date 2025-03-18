@@ -3,9 +3,14 @@ import { navigationItems } from "../../constants/menu";
 interface MobileMenuProps {
   isOpen: boolean;
   handleSmoothScroll: (id: string) => void;
+  activeItem: string;
 }
 
-export default function MobileMenu({ isOpen, handleSmoothScroll }: MobileMenuProps) {
+export default function MobileMenu({
+  isOpen,
+  handleSmoothScroll,
+  activeItem,
+}: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
@@ -20,12 +25,12 @@ export default function MobileMenu({ isOpen, handleSmoothScroll }: MobileMenuPro
               handleSmoothScroll(item.href.substring(1));
             }}
             className={`${
-              item.current
-                ? "bg-medium-red-violet-900 text-white"
-                : "text-gray-300 hover:bg-medium-red-violet-700 hover:text-white"
+              activeItem === item.href
+                ? "bg-medium-red-violet-800/70"
+                : " hover:bg-medium-red-violet-700 hover:text-medium-red-violet-200"
             } 
               block rounded-md px-3 py-2 text-base font-medium`}
-            aria-current={item.current ? "page" : undefined}
+            aria-current={activeItem === item.href ? "page" : undefined}
           >
             {item.name}
           </a>

@@ -1,15 +1,21 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navigationItems } from "../../constants/menu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
-import Logo from '../../../src/assets/img/logo.svg?react';
+import Logo from "../../../src/assets/img/logo.svg?react";
 
 interface NavbarProps {
   isMobileMenuOpen: boolean;
   toggleMobileMenu: () => void;
   handleSmoothScroll: (id: string) => void;
+  activeItem: string;
 }
 
-export default function Navbar({ isMobileMenuOpen, toggleMobileMenu, handleSmoothScroll }: NavbarProps) {
+export default function Navbar({
+  isMobileMenuOpen,
+  toggleMobileMenu,
+  handleSmoothScroll,
+  activeItem,
+}: NavbarProps) {
   return (
     <nav className="bg-background text-text">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -23,16 +29,22 @@ export default function Navbar({ isMobileMenuOpen, toggleMobileMenu, handleSmoot
               onClick={toggleMobileMenu}
             >
               {isMobileMenuOpen ? (
-                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                <XMarkIcon
+                  className="block h-6 w-6 text-medium-red-violet-900"
+                  aria-hidden="true"
+                />
               ) : (
-                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                <Bars3Icon
+                  className="block h-6 w-6 text-medium-red-violet-900"
+                  aria-hidden="true"
+                />
               )}
             </button>
           </div>
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
             <div className="flex shrink-0 items-center">
-              <Logo className="h-5 w-auto"/>
+              <Logo className="h-5 w-auto" />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -45,12 +57,12 @@ export default function Navbar({ isMobileMenuOpen, toggleMobileMenu, handleSmoot
                       handleSmoothScroll(item.href.substring(1));
                     }}
                     className={`${
-                      item.current
+                      activeItem === item.href
                         ? "bg-medium-red-violet-900/50 rounded-md"
                         : "border-b-2 border-transparent hover:border-medium-red-violet-900 border-dashed hover:text-medium-red-violet-700"
                     } 
                       px-3 py-2 text-sm font-medium`}
-                    aria-current={item.current ? "page" : undefined}
+                    aria-current={activeItem === item.href ? "page" : undefined}
                   >
                     {item.name}
                   </a>
@@ -60,7 +72,7 @@ export default function Navbar({ isMobileMenuOpen, toggleMobileMenu, handleSmoot
           </div>
 
           <ThemeToggle />
-        </div> 
+        </div>
       </div>
     </nav>
   );
