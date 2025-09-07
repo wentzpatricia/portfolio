@@ -17,7 +17,6 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setActiveItem(`#${id}`);
   };
 
   useEffect(() => {
@@ -27,9 +26,24 @@ const Header = () => {
       } else {
         setIsScrolled(false);
       }
+
+      const scrollPosition = window.scrollY + 100;
+      const activeSection = navigationItems.find((item) => {
+        const section = document.getElementById(item.href.substring(1));
+        return (
+          section &&
+          scrollPosition >= section.offsetTop &&
+          scrollPosition < section.offsetTop + section.offsetHeight
+        );
+      });
+
+      if (activeSection) {
+        setActiveItem(activeSection.href);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
