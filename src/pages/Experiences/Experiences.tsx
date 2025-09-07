@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { experiences, Experience } from "./constants/experiences";
+import { useTranslation } from "../../hooks/useTranslation";
 
 const Experiences = () => {
+  const { t } = useTranslation();
   const [selectedExperience, setSelectedExperience] = useState<Experience>(
     experiences[0]
   );
@@ -15,7 +17,7 @@ const Experiences = () => {
         <header className="mb-8">
           <h2 className="text-3xl md:text-5xl font-extrabold relative">
             <span className="absolute -top-1 -left-1 w-12 h-12 border-2 border-medium-red-violet-600 rounded-full opacity-60"></span>
-            Experiências
+            {t("experiences.title")}
           </h2>
         </header>
 
@@ -55,10 +57,10 @@ const Experiences = () => {
             <header className="mb-4">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-2">
                 <h3 className="text-xl md:text-2xl font-bold">
-                  {selectedExperience.position}
+                  {t(selectedExperience.positionKey)}
                 </h3>
                 <time className="text-medium-red-violet-400 text-sm md:text-base">
-                  {selectedExperience.period}
+                  {t(selectedExperience.periodKey)}
                 </time>
               </div>
               <p className="text-medium-red-violet-600 text-base md:text-lg font-semibold">
@@ -67,15 +69,15 @@ const Experiences = () => {
             </header>
 
             <ul className="list-disc list-inside mb-4 text-sm md:text-base leading-relaxed text-text">
-              {selectedExperience.description.map((item, index) => (
-                <li key={index}>{item}</li>
+              {selectedExperience.descriptionKeys.map((key, index) => (
+                <li key={index}>{t(key)}</li>
               ))}
             </ul>
 
             {selectedExperience.technologies && (
               <footer>
                 <h4 className="text-medium-red-violet-600 font-semibold text-sm mb-2">
-                  Tecnologias utilizadas:
+                  {t("experiences.technologiesUsed")}
                 </h4>
                 <ul className="flex flex-wrap gap-2" role="list">
                   {selectedExperience.technologies.map((tech, index) => (
@@ -103,7 +105,9 @@ const Experiences = () => {
                   ? "bg-medium-red-violet-600"
                   : "bg-medium-red-violet-900/50"
               }`}
-              onClick={() => setSelectedExperience(experiences[index])}
+              onClick={() =>
+                setSelectedExperience(experiences[index])
+              }
               aria-label={`Ver experiência ${experiences[index].company}`}
             />
           ))}

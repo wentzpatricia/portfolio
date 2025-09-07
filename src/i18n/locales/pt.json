@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Quem sou",
+    "experiences": "Experiências",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "title": "front-end",
+    "description": "Olá ✨, me chamo Patrícia e sou uma desenvolvedora front-end apaixonada por criar interfaces digitais funcionais, responsivas e visualmente atraentes. Com um olhar atento aos detalhes e foco em boas práticas de desenvolvimento, meu objetivo é transformar ideias em experiências digitais que encantem os usuários. Adoro trabalhar com tecnologias modernas e estou sempre em busca de aprender e evoluir na área.",
+    "downloadResume": "Baixar resumo"
+  },
+  "about": {
+    "title": "Um pouco sobre mim",
+    "description1": "Antes de me tornar desenvolvedora, fui professora de ballet clássico, dedicando minha vida à arte de contar histórias pelo movimento desde os 11 anos. A dança permanece como uma grande paixão e hobby essencial.",
+    "description2": "Minha jornada na tecnologia começou em 2020, quando um primeiro contato com programação despertou minha curiosidade e me levou a ingressar no curso de Análise e Desenvolvimento de Sistemas no Senac-RS. Durante a faculdade, descobri minha vocação no desenvolvimento front-end, explorando tecnologias como Angular e React para criar interfaces intuitivas e eficientes.",
+    "description3": "Atualmente, atuo como desenvolvedora front-end pleno na Unicred, desenvolvendo telas e testes unitários na área de meios de pagamento e Pix. Continuo estudando e aprimorando minhas habilidades para entregar soluções cada vez mais inovadoras e de qualidade."
+  },
+  "experiences": {
+    "title": "Experiências",
+    "technologiesUsed": "Tecnologias utilizadas:",
+    "current": "atualmente",
+    "unicred": {
+      "position": "Desenvolvedora Front-end – Meios de Pagamento e Pix",
+      "period": "Jun de 2024 - até o momento",
+      "description1": "Desenvolvimento de telas seguindo os protótipos do Figma, juntamente com a implementação de testes unitários.",
+      "description2": "Utilização de TypeScript e React no front-end, além de Jest e Testing Library para testes unitários.",
+      "description3": "Atuação em um projeto na área de meios de pagamento e Pix."
+    },
+    "identityMatrix": {
+      "position": "Revisora Técnica Front-end Freelancer",
+      "period": "Mar de 2025 - Ago de 2025",
+      "description1": "Revisão de Pull Requests, garantindo qualidade do código, padronização e boas práticas de desenvolvimento.",
+      "description2": "Criação de protótipos de telas no Figma, assegurando consistência entre design e implementação.",
+      "description3": "Utilização de TypeScript e React no front-end.",
+      "description4": "Atuação em um projeto voltado para captação de leads nos EUA."
+    },
+    "infinity": {
+      "position": "Desenvolvedora Front-end (Freelancer)",
+      "period": "Nov de 2023 - Jul de 2024",
+      "description1": "Elaboração e desenvolvimento de layouts de telas seguindo o template Metronic.",
+      "description2": "Uso de Figma para prototipagem, Angular, TypeScript e RxJS para desenvolvimento e SCSS e Bootstrap para estilização.",
+      "description3": "Atuação em um projeto white-label, sendo a principal responsável pelo front-end, organizando a arquitetura e criando componentes reutilizáveis e dinâmicos."
+    },
+    "evoOne": {
+      "position": "Desenvolvedora Front-end",
+      "period": "Mar de 2023 - Jun de 2024",
+      "description1": "Elaboração e desenvolvimento de layouts de telas.",
+      "description2": "Uso de Figma para prototipagem, Angular, TypeScript e RxJS para desenvolvimento e SCSS, Angular Material e Bootstrap para estilização.",
+      "description3": "Participação em um sistema white-label de monitoramento e registro de ocorrências, destinado a cidades, onde agentes recebiam e atendiam ocorrências criadas por cidadãos ou funcionários."
+    },
+    "ilegra": {
+      "position": "Estagiária Jovem Talento",
+      "period": "Mar de 2022 - Mar de 2023",
+      "description1": "Participei de trilhas de aprendizado técnico com foco em JavaScript, TypeScript, Angular, React e SASS, além de desenvolver habilidades interpessoais por meio de feedback contínuo de profissionais seniores.",
+      "description2": "Desenvolvi projetos práticos de front-end para consolidar o conhecimento técnico.",
+      "description3": "Colaborei em um ambiente ágil, utilizando controle de versão com Git e seguindo as melhores práticas de desenvolvimento."
+    }
+  },
+  "menu": {
+    "title": "Menu",
+    "theme": "Tema"
+  }
+}

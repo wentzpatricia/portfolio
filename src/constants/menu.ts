@@ -1,7 +1,7 @@
 export const navigationItems = [
-  { name: "Início", href: "#home" },
-  { name: "Quem sou", href: "#about" },
-  { name: "Experiências", href: "#experiences" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Contato", href: "#contact" },
+  { nameKey: "navigation.home", href: "#home" },
+  { nameKey: "navigation.about", href: "#about" },
+  { nameKey: "navigation.experiences", href: "#experiences" },
+  { nameKey: "navigation.projects", href: "#projects" },
+  { nameKey: "navigation.contact", href: "#contact" },
 ];

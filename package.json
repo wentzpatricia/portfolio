@@ -12,8 +12,10 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.6",
+    "i18next": "^25.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.7.3",
     "tailwindcss": "^4.0.6"
   },
   "devDependencies": {

@@ -1,5 +1,7 @@
 import { navigationItems } from "../../constants/menu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import { LanguageToggle } from "../LanguageToggle/LanguageToggle";
+import { useTranslation } from "../../hooks/useTranslation";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../../src/assets/img/logo.svg?react";
 
@@ -16,6 +18,8 @@ export default function MobileMenu({
   activeItem,
   onClose,
 }: MobileMenuProps) {
+  const { t } = useTranslation();
+
   const handleItemClick = (id: string) => {
     handleSmoothScroll(id);
     onClose();
@@ -52,7 +56,7 @@ export default function MobileMenu({
           <nav className="flex-1 px-6 py-6">
             <ul className="space-y-2">
               {navigationItems.map((item) => (
-                <li key={item.name}>
+                <li key={item.nameKey}>
                   <a
                     href={item.href}
                     onClick={(e) => {
@@ -66,7 +70,7 @@ export default function MobileMenu({
                     }`}
                     aria-current={activeItem === item.href ? "page" : undefined}
                   >
-                    {item.name}
+                    {t(item.nameKey)}
                   </a>
                 </li>
               ))}
@@ -74,9 +78,13 @@ export default function MobileMenu({
           </nav>
 
           <div className="p-6 border-t border-medium-gray-700">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-medium-gray-400">Tema</span>
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-sm text-medium-gray-400">{t("menu.theme")}</span>
               <ThemeToggle />
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-medium-gray-400">Idioma</span>
+              <LanguageToggle />
             </div>
           </div>
         </div>

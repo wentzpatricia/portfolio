@@ -1,6 +1,8 @@
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { navigationItems } from "../../constants/menu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import { LanguageToggle } from "../LanguageToggle/LanguageToggle";
+import { useTranslation } from "../../hooks/useTranslation";
 import Logo from "../../../src/assets/img/logo.svg?react";
 
 interface NavbarProps {
@@ -15,6 +17,7 @@ export default function Navbar({
   handleSmoothScroll,
   activeItem,
 }: NavbarProps) {
+  const { t } = useTranslation();
   return (
     <nav className="bg-background text-text">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -42,7 +45,7 @@ export default function Navbar({
               <div className="flex space-x-4">
                 {navigationItems.map((item) => (
                   <a
-                    key={item.name}
+                    key={item.nameKey}
                     href={item.href}
                     onClick={(e) => {
                       e.preventDefault();
@@ -56,14 +59,15 @@ export default function Navbar({
                       px-3 py-2 text-sm font-medium`}
                     aria-current={activeItem === item.href ? "page" : undefined}
                   >
-                    {item.name}
+                    {t(item.nameKey)}
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="hidden sm:block">
+          <div className="hidden sm:flex items-center space-x-2">
+            <LanguageToggle />
             <ThemeToggle />
           </div>
         </div>

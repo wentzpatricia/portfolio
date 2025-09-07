@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "front-end",
+    "description": "Hello ✨, I'm Patrícia and I'm a front-end developer passionate about creating functional, responsive and visually attractive digital interfaces. With an eye for details and focus on development best practices, my goal is to transform ideas into digital experiences that delight users. I love working with modern technologies and I'm always looking to learn and evolve in the area.",
+    "downloadResume": "Download resume"
+  },
+  "about": {
+    "title": "A little about me",
+    "description1": "Before becoming a developer, I was a classical ballet teacher, dedicating my life to the art of telling stories through movement since I was 11 years old. Dance remains as a great passion and essential hobby.",
+    "description2": "My journey in technology began in 2020, when a first contact with programming awakened my curiosity and led me to enter the Analysis and Systems Development course at Senac-RS. During college, I discovered my vocation in front-end development, exploring technologies like Angular and React to create intuitive and efficient interfaces.",
+    "description3": "Currently, I work as a full front-end developer at Unicred, developing screens and unit tests in the payment methods and Pix area. I continue studying and improving my skills to deliver increasingly innovative and quality solutions."
+  },
+  "experiences": {
+    "title": "Experiences",
+    "technologiesUsed": "Technologies used:",
+    "current": "currently",
+    "unicred": {
+      "position": "Front-end Developer – Payment Methods and Pix",
+      "period": "Jun 2024 - present",
+      "description1": "Development of screens following Figma prototypes, along with unit test implementation.",
+      "description2": "Use of TypeScript and React in the front-end, plus Jest and Testing Library for unit tests.",
+      "description3": "Working on a project in the payment methods and Pix area."
+    },
+    "identityMatrix": {
+      "position": "Front-end Technical Reviewer Freelancer",
+      "period": "Mar 2025 - Aug 2025",
+      "description1": "Pull Request review, ensuring code quality, standardization and development best practices.",
+      "description2": "Creation of screen prototypes in Figma, ensuring consistency between design and implementation.",
+      "description3": "Use of TypeScript and React in the front-end.",
+      "description4": "Working on a project focused on lead generation in the USA."
+    },
+    "infinity": {
+      "position": "Front-end Developer (Freelancer)",
+      "period": "Nov 2023 - Jul 2024",
+      "description1": "Development and creation of screen layouts following the Metronic template.",
+      "description2": "Use of Figma for prototyping, Angular, TypeScript and RxJS for development and SCSS and Bootstrap for styling.",
+      "description3": "Working on a white-label project, being the main responsible for the front-end, organizing the architecture and creating reusable and dynamic components."
+    },
+    "evoOne": {
+      "position": "Front-end Developer",
+      "period": "Mar 2023 - Jun 2024",
+      "description1": "Development and creation of screen layouts.",
+      "description2": "Use of Figma for prototyping, Angular, TypeScript and RxJS for development and SCSS, Angular Material and Bootstrap for styling.",
+      "description3": "Participation in a white-label monitoring and incident registration system, intended for cities, where agents received and handled incidents created by citizens or employees."
+    },
+    "ilegra": {
+      "position": "Young Talent Intern",
+      "period": "Mar 2022 - Mar 2023",
+      "description1": "I participated in technical learning tracks focused on JavaScript, TypeScript, Angular, React and SASS, in addition to developing interpersonal skills through continuous feedback from senior professionals.",
+      "description2": "I developed practical front-end projects to consolidate technical knowledge.",
+      "description3": "I collaborated in an agile environment, using version control with Git and following development best practices."
+    }
+  },
+  "menu": {
+    "title": "Menu",
+    "theme": "Theme"
+  }
+}
