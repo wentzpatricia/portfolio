@@ -24,33 +24,28 @@ const About = () => {
       </figure>
 
       <div className="w-full lg:w-8/12 text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-justify flex flex-col justify-center">
-        <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-extrabold">Um pouco sobre mim</h2>
+        <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-extrabold">
+          Um pouco sobre mim
+        </h2>
         <p>
           Antes de me tornar desenvolvedora, fui professora de ballet clássico,
-          dedicando minha vida à arte de contar histórias por meio do movimento
-          desde os 11 anos. A dança continua sendo uma grande paixão e um hobby
-          essencial na minha vida.
+          dedicando minha vida à arte de contar histórias pelo movimento desde
+          os 11 anos. A dança permanece como uma grande paixão e hobby
+          essencial.
         </p>
         <p>
-          Minha jornada na tecnologia começou em 2020, em uma reviravolta
-          inesperada. Até então, nunca havia imaginado que me tornaria
-          desenvolvedora, mas tudo mudou quando meu esposo me apresentou os
-          vídeos do Guanabara. Aquele primeiro contato despertou minha
-          curiosidade para um universo totalmente novo, cheio de possibilidades.
-          Motivada por esse interesse crescente, ingressei na faculdade de
-          Análise e Desenvolvimento de Sistemas no Senac-RS, dando início à
-          minha transição de carreira.
+          Minha jornada na tecnologia começou em 2020, quando um primeiro
+          contato com programação despertou minha curiosidade e me levou a
+          ingressar no curso de Análise e Desenvolvimento de Sistemas no
+          Senac-RS. Durante a faculdade, descobri minha vocação no
+          desenvolvimento front-end, explorando tecnologias como Angular e React
+          para criar interfaces intuitivas e eficientes.
         </p>
         <p>
-          Durante a faculdade, explorei diversas áreas da TI, mas foi no
-          desenvolvimento front-end que encontrei minha verdadeira vocação.
-          Desde então, venho me aprofundando cada vez mais nessa área,
-          trabalhando com Angular e React para criar interfaces intuitivas e
-          eficientes. Hoje, atuo como desenvolvedora front-end pleno na Unicred,
-          onde sou responsável pelo desenvolvimento de telas e testes unitários
-          na área de meios de pagamento e Pix. Além disso, sigo estudando e
-          aprimorando minhas habilidades para continuar evoluindo
-          profissionalmente.
+          Atualmente, atuo como desenvolvedora front-end pleno na Unicred,
+          desenvolvendo telas e testes unitários na área de meios de pagamento e
+          Pix. Continuo estudando e aprimorando minhas habilidades para entregar
+          soluções cada vez mais inovadoras e de qualidade.
         </p>
         <div className="flex mt-8 sm:mt-10">
           <a

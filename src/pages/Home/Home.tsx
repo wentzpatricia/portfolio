@@ -27,13 +27,16 @@ const Home = () => {
         </p>
         <p className="pb-6 flex flex-col  md:text-2xl font-normal leading-relaxed text-justify">
           <span>
-            Olá ✨, me chamo Patrícia e sou uma desenvolvedora front-end
-            apaixonada por criar interfaces digitais funcionais, responsivas e
-            visualmente atraentes. Com um olhar atento aos detalhes e foco em
-            boas práticas de desenvolvimento, meu objetivo é transformar ideias
-            em experiências digitais que encantem os usuários. Adoro trabalhar
-            com tecnologias modernas e estou sempre em busca de aprender e
-            evoluir na área.
+            Olá ✨, me chamo Patrícia e sou desenvolvedora front-end,
+            especializada em criar interfaces digitais funcionais, responsivas e
+            visualmente atraentes. Com atenção aos detalhes e foco em boas
+            práticas de desenvolvimento, busco transformar ideias em
+            experiências digitais que proporcionem valor e encantem os usuários.
+            Tenho experiência com tecnologias modernas e estou constantemente
+            aprendendo e evoluindo para entregar soluções cada vez mais
+            eficientes e inovadoras. Gosto de colaborar em projetos desafiadores
+            e contribuir para produtos que sejam tanto esteticamente agradáveis
+            quanto fáceis de usar.
           </span>
         </p>
 

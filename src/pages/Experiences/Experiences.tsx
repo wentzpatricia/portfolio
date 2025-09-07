@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { experiences, Experience } from "../../constants/experiences";
+import { experiences, Experience } from "./constants/experiences";
 
 const Experiences = () => {
   const [selectedExperience, setSelectedExperience] = useState<Experience>(
@@ -9,9 +9,9 @@ const Experiences = () => {
   return (
     <section
       id="experiences"
-      className="py-12 px-5 md:px-15 bg-medium-gray-900 text-text"
+      className="py-12 px-5 md:px-24 bg-medium-gray-900 text-text"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <header className="mb-8">
           <h2 className="text-3xl md:text-5xl font-extrabold relative">
             <span className="absolute -top-1 -left-1 w-12 h-12 border-2 border-medium-red-violet-600 rounded-full opacity-60"></span>
@@ -19,8 +19,11 @@ const Experiences = () => {
           </h2>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-          <nav className="hidden lg:block space-y-4" aria-label="Lista de experiências">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+          <nav
+            className="hidden lg:block space-y-4 lg:col-span-1"
+            aria-label="Lista de experiências"
+          >
             {experiences.map((experience) => (
               <button
                 key={experience.id}
@@ -48,7 +51,7 @@ const Experiences = () => {
             ))}
           </nav>
 
-          <article className="bg-medium-gray-800 rounded-lg p-6 border border-medium-gray-700">
+          <article className="bg-medium-gray-800 rounded-lg p-6 border border-medium-gray-700 lg:col-span-2">
             <header className="mb-4">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-2">
                 <h3 className="text-xl md:text-2xl font-bold">
@@ -63,9 +66,11 @@ const Experiences = () => {
               </p>
             </header>
 
-            <p className="text-text leading-relaxed text-sm md:text-base mb-4">
-              {selectedExperience.description}
-            </p>
+            <ul className="list-disc list-inside mb-4 text-sm md:text-base leading-relaxed text-text">
+              {selectedExperience.description.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
 
             {selectedExperience.technologies && (
               <footer>
