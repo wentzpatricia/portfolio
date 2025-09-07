@@ -1,4 +1,4 @@
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 import { navigationItems } from "../../constants/menu";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import Logo from "../../../src/assets/img/logo.svg?react";
@@ -11,7 +11,6 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  isMobileMenuOpen,
   toggleMobileMenu,
   handleSmoothScroll,
   activeItem,
@@ -28,22 +27,15 @@ export default function Navbar({
                 focus:ring-2 focus:ring-inset focus:ring-medium-red-violet-900"
               onClick={toggleMobileMenu}
             >
-              {isMobileMenuOpen ? (
-                <XMarkIcon
-                  className="block h-6 w-6 text-medium-red-violet-900"
-                  aria-hidden="true"
-                />
-              ) : (
-                <Bars3Icon
-                  className="block h-6 w-6 text-medium-red-violet-900"
-                  aria-hidden="true"
-                />
-              )}
+              <Bars3Icon
+                className="block h-6 w-6 text-medium-red-violet-900"
+                aria-hidden="true"
+              />
             </button>
           </div>
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div className="flex shrink-0 items-center">
+            <div className="hidden sm:flex shrink-0 items-center">
               <Logo className="h-5 w-auto" />
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -59,7 +51,7 @@ export default function Navbar({
                     className={`${
                       activeItem === item.href
                         ? "bg-medium-red-violet-900/50 rounded-md"
-                        : "border-b-2 border-transparent hover:border-medium-red-violet-900 border-dashed hover:text-medium-red-violet-700"
+                        : " hover:text-medium-red-violet-700"
                     } 
                       px-3 py-2 text-sm font-medium`}
                     aria-current={activeItem === item.href ? "page" : undefined}
@@ -71,7 +63,9 @@ export default function Navbar({
             </div>
           </div>
 
-          <ThemeToggle />
+          <div className="hidden sm:block">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </nav>

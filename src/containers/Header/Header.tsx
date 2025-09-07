@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled && !isMobileMenuOpen
           ? "bg-medium-red-violet-200/80 shadow-md backdrop-blur-sm"
           : "bg-transparent"
       }`}
@@ -54,6 +54,7 @@ const Header = () => {
         isOpen={isMobileMenuOpen}
         handleSmoothScroll={handleSmoothScroll}
         activeItem={activeItem}
+        onClose={toggleMobileMenu}
       />
     </header>
   );

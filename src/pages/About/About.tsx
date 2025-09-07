@@ -7,24 +7,24 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mt-20 md:p-20 p-8 w-full flex flex-wrap justify-between bg-medium-red-violet-950 text-medium-red-violet-50"
+      className="mt-20 md:p-20 p-6 w-full flex flex-col lg:flex-row lg:justify-between bg-medium-red-violet-950 text-medium-red-violet-50"
     >
-      <figure className="w-full mb-9 md:mb-0 md:w-3/12 min-w-[300px] min-h-[300px] flex items-center justify-center">
-        <div className="relative">
+      <figure className="w-full mb-8 lg:mb-0 lg:w-3/12 flex items-center justify-center">
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-full lg:h-auto">
           <img
             src={img}
             alt="imagem de perfil de Patricia Moraes"
-            className="rounded-t-full"
+            className="w-full h-full object-cover rounded-t-full"
           />
 
-          <span className="absolute top-10 right-10 w-12 h-12 bg-medium-red-violet-600 rounded-t-2xl rounded-br-2xl"></span>
+          <span className="absolute top-6 right-6 sm:top-10 sm:right-10 w-8 h-8 sm:w-12 sm:h-12 bg-medium-red-violet-600 rounded-t-2xl rounded-br-2xl"></span>
 
-          <span className="absolute bottom-4 -left-4 w-12 h-12 bg-medium-red-violet-400 rounded-tr-2xl rounded-bl-2xl"></span>
+          <span className="absolute bottom-2 -left-2 sm:bottom-4 sm:-left-4 w-8 h-8 sm:w-12 sm:h-12 bg-medium-red-violet-400 rounded-tr-2xl rounded-bl-2xl"></span>
         </div>
       </figure>
 
-      <div className="w-full md:w-8/12 md:text-2xl font-normal leading-relaxed text-justify flex flex-col align-middle justify-center">
-        <h2 className="mb-5 md:text-3xl font-extrabold">Um pouco sobre mim</h2>
+      <div className="w-full lg:w-8/12 text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-justify flex flex-col justify-center">
+        <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-extrabold">Um pouco sobre mim</h2>
         <p>
           Antes de me tornar desenvolvedora, fui professora de ballet clássico,
           dedicando minha vida à arte de contar histórias por meio do movimento
@@ -52,12 +52,12 @@ const About = () => {
           aprimorando minhas habilidades para continuar evoluindo
           profissionalmente.
         </p>
-        <div className="flex mt-10">
+        <div className="flex mt-8 sm:mt-10">
           <a
             href="https://github.com/wentzpatricia"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer mr-3 w-10 h-10  md:w-15 md:h-15"
+            className="cursor-pointer mr-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover:scale-110 transition-transform duration-300"
           >
             <Github className="w-full h-full" />
           </a>
@@ -65,7 +65,7 @@ const About = () => {
             href="https://www.linkedin.com/in/patriciawentzdemoraes"
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer mr-3 w-10 h-10  md:w-15 md:h-15"
+            className="cursor-pointer mr-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover:scale-110 transition-transform duration-300"
           >
             <Linkedin className="w-full h-full" />
           </a>
